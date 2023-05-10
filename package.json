@@ -1,0 +1,24 @@
+{
+  "name": "@paulshryock/logger",
+  "version": "0.0.0",
+  "description": "PSR-3-compliant logger.",
+  "keywords": [
+    "psr-3",
+    "psr3",
+    "log",
+    "logger",
+    "logging",
+    "console"
+  ],
+  "homepage": "https://github.com/paulshryock/logger",
+  "bugs": {
+    "url": "https://github.com/paulshryock/logger/issues/new?assignees=&labels=bug&projects=&template=4_report_a_bug.md&title="
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulshryock/logger.git"
+  },
+  "license": "MIT",
+  "author": "Paul Shryock (https://github.com/paulshryock)",
+  "type": "module"
+}
