@@ -39,6 +39,10 @@ class MyService {
 }
 ```
 
+### Recommended log level usage
+
+[![](docs/img/log-level-flowchart.svg)](https://mermaid.live/edit#pako:eNp1ksFuwjAMhl8lynm8AIdNQNnoNthhhx3WHUxr2ojGQYkLqhDvPgdoNDatp_S3_y9_LB916SrUY71p3aFswHNBBSn5Jp-FzhwGBSUbR4oQK8VOrVExbJEeCv2lRqMew2h0r6ZXkyjkojAbOFPh5NZiZYCx7W9t2bUn2eaDbS62BQQVnEVuDNUqsNvtJMPB-a3834IepX3uvfOiXgGJ-SS1D_AkpnP1Up-JOvGoetcpQ3sMbGrgeBGodfcLv4jDQJETfpbw-UDM_0Q2xOgjWc4NSHrC6gb8LJaVY1NiAucJ_BInRxv3I3QWpaC4QYXERuKHPjBa1VEXYN3ibezXOBWLvkYq-3RDlm5YDtzlhQuUsOj3kuof7irOrkVZloG5TMw3qc28kTdBK2V9pyWABVPJkh1jc6ElvpUHj-VYgd8WuqCT9EHH7r2nUo_Zd3inu10lK5MZqD1YPd5AG0SVRWLnl5etPS_v6RtWHNzk)
+
 ## Support
 
 - [Ask a question](https://github.com/paulshryock/logger/issues/new?assignees=&labels=question&projects=&template=1_ask_a_question.md&title=)

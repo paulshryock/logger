@@ -1,3 +1,3 @@
-export interface LogContext {
-  exception?: Error,
+export interface LogContext extends Object {
+  exception?: Error
 }
