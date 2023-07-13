@@ -34,8 +34,8 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@babel/core": "7.22.5",
-    "@babel/preset-env": "7.22.5",
+    "@babel/core": "7.22.9",
+    "@babel/preset-env": "7.22.9",
     "@babel/preset-typescript": "7.22.5",
     "@jest/globals": "29.6.1",
     "@types/node": "20.4.2",
