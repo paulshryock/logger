@@ -38,7 +38,7 @@
     "@babel/preset-env": "7.22.15",
     "@babel/preset-typescript": "7.22.15",
     "@jest/globals": "29.7.0",
-    "@types/node": "20.11.3",
+    "@types/node": "20.11.7",
     "babel-jest": "29.7.0",
     "dts-bundle-generator": "9.2.5",
     "esbuild": "0.19.11",
