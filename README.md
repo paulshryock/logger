@@ -13,7 +13,7 @@ Total size is less than 5 KiB.
 
 | Software | Minimum Version |
 | :------- | :-------------- |
-| Node     | <!-- todo -->   |
+| Node     | 18.x            |
 
 ## Installation
 
