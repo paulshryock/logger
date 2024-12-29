@@ -21,8 +21,34 @@ Total size is less than 5 KiB.
 npm install @paulshryock/logger
 ```
 
-<!-- todo -->
-<!-- ## API -->
+## API
+
+### Usage examples
+
+```typescript
+import { CommandLineLogger, Logger } from '@paulshryock/logger'
+
+class MyClass {
+    #logger: Logger
+
+    public constructor(logger: Logger) {
+        this.#logger = logger
+    }
+
+    public logMessages(): void {
+        this.#logger.emergency('System is unusable.')
+        this.#logger.alert('Action must be taken immediately.')
+        this.#logger.critical('Critical conditions.')
+        this.#logger.error('Runtime error.')
+        this.#logger.warn('Exceptional occurrence that is not an error.')
+        this.#logger.notice('Normal but significant event.')
+        this.#logger.info('Interesting event.')
+        this.#logger.debug('Detailed debug information.')
+    }
+}
+
+new MyClass(new CommandLineLogger())
+```
 
 ## Support
 
