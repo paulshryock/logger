@@ -1,0 +1,91 @@
+{
+	"name": "@paulshryock/logger",
+	"version": "0.0.0",
+	"description": " PSR-3-compliant logger for Node.js.",
+	"keywords": [
+		"psr-3",
+		"psr3",
+		"log",
+		"logger",
+		"logging",
+		"console"
+	],
+	"homepage": "https://github.com/paulshryock/logger",
+	"bugs": {
+		"url": "https://github.com/paulshryock/logger/issues/new?assignees=&labels=bug&projects=&template=4_report_a_bug.md&title="
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/paulshryock/logger.git"
+	},
+	"license": "MIT",
+	"author": "Paul Shryock (https://github.com/paulshryock)",
+	"type": "module",
+	"main": "./dist/index.js",
+	"typings": "./dist/index.d.ts",
+	"files": [
+		"./dist/index.js",
+		"./dist/index.d.ts"
+	],
+	"sideEffects": false,
+	"scripts": {
+		"precompile": "rm -rf dist",
+		"compile": "esbuild src/index.ts --bundle --format=esm --minify-syntax --minify-whitespace --outfile=dist/index.js --platform=node",
+		"docs": "typedoc",
+		"fix": "run-s format lint:fix",
+		"format": "npm run format:fix",
+		"format:check": "prettier --check --log-level=warn .",
+		"format:fix": "prettier --log-level=warn --write .",
+		"lint": "npm run lint:check",
+		"lint:check": "eslint .",
+		"lint:fix": "npm run lint -- --fix",
+		"prepack": "npm-run-all -p quality docs types -s test:acceptance",
+		"prepare": "npm run ts-node -- bin/prepare.ts",
+		"quality": "run-p format:check lint typecheck test compile",
+		"test": "node --experimental-vm-modules --no-warnings=ExperimentalWarning node_modules/jest/bin/jest.js",
+		"test:acceptance": "npm test -- --config=jest.config.acceptance.ts",
+		"ts-node": "node --loader ts-node/esm --no-warnings=ExperimentalWarning",
+		"typecheck": "tsc",
+		"types": "dts-bundle-generator --no-banner=true --out-file=dist/index.d.ts src/index.ts",
+		"upgrade:all": "ncu --upgrade",
+		"upgrade:dry-run": "ncu",
+		"upgrade:minor": "ncu --target=minor --upgrade",
+		"upgrade:patch": "ncu --target=patch --upgrade",
+		"version": "release-bump -epq --ignore=coverage,dist && git add ."
+	},
+	"devDependencies": {
+		"@babel/core": "7.26.0",
+		"@babel/preset-env": "7.26.0",
+		"@babel/preset-typescript": "7.26.0",
+		"@eslint-community/eslint-plugin-eslint-comments": "4.4.1",
+		"@jest/globals": "29.7.0",
+		"@types/fs-extra": "11.0.4",
+		"@types/mock-fs": "4.13.4",
+		"@types/node": "22.10.2",
+		"@typescript-eslint/eslint-plugin": "8.18.2",
+		"@typescript-eslint/parser": "8.18.2",
+		"babel-jest": "29.7.0",
+		"dts-bundle-generator": "9.5.1",
+		"esbuild": "0.24.2",
+		"eslint": "9.17.0",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-plugin-jest": "28.10.0",
+		"eslint-plugin-jsdoc": "50.6.1",
+		"eslint-plugin-json": "4.0.1",
+		"husky": "9.1.7",
+		"jest": "29.7.0",
+		"mock-fs": "5.4.1",
+		"npm-check-updates": "17.1.12",
+		"npm-run-all2": "7.0.2",
+		"prettier": "3.4.2",
+		"prettier-plugin-packagejson": "2.5.6",
+		"release-bump": "3.0.0-alpha.69",
+		"ts-node": "10.9.2",
+		"tslib": "2.8.1",
+		"typedoc": "0.27.6",
+		"typescript": "5.7.2"
+	},
+	"dependencies": {
+		"@paulshryock/abstractions": "0.3.0"
+	}
+}
