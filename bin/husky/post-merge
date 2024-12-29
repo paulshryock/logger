@@ -1,0 +1,5 @@
+echo "📦 Auditing production dependencies."
+npm audit --omit=dev
+
+echo "📦 Checking for outdated dependencies... run \`npm run upgrade:all\`, \`npm run upgrade:minor\`, or \`npm run upgrade:patch\` to upgrade dependencies."
+npm run upgrade:dry-run
