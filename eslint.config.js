@@ -115,6 +115,7 @@ export default [
 				{
 					tagSequence: [
 						{ tags: ['typedef', 'type', 'template', 'internal', 'external'] },
+						{ tags: ['alpha', 'beta'] },
 						{ tags: ['copyright', 'license'] },
 						{ tags: ['example'] },
 						{

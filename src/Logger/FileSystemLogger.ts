@@ -24,6 +24,8 @@ import { Stringable } from '../Stringable.ts'
  * See https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
  * for the full interface specification.
  *
+ * @beta
+ *
  * @since unreleased
  */
 export class FileSystemLogger extends NullLogger implements Logger {
