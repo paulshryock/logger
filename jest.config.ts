@@ -17,7 +17,7 @@ const config: Config = {
 	errorOnDeprecated: true,
 	extensionsToTreatAsEsm: ['.ts'],
 	testMatch: ['<rootDir>/tests/**/*.test.ts'],
-	testPathIgnorePatterns: ['/tests/acceptance/'],
+	testPathIgnorePatterns: ['/tests/acceptance/', '/tests/e2e/'],
 }
 
 export default config
