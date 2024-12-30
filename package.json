@@ -38,7 +38,7 @@
 		"format:fix": "prettier --log-level=warn --write .",
 		"lint": "npm run lint:check",
 		"lint:check": "eslint .",
-		"lint:fix": "npm run lint -- --fix",
+		"lint:fix": "npm run lint:check -- --fix",
 		"prepack": "npm-run-all -p quality docs types -s test:acceptance",
 		"prepare": "npm run ts-node -- bin/prepare.ts",
 		"quality": "run-p format:check lint typecheck test compile",
