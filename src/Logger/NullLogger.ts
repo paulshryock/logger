@@ -171,4 +171,18 @@ export abstract class NullLogger implements Logger {
 			`${message}`,
 		)
 	}
+
+	/**
+	 * Validates a given log level.
+	 *
+	 * @param  {string} level Log level to validate.
+	 * @return {void}
+	 * @throws {TypeError}    Level is invalid.
+	 *
+	 * @since  unreleased
+	 */
+	protected validateLevel(level: string): void {
+		if (!(level.toUpperCase() in LogLevel))
+			throw new TypeError(`Invalid log level "${level}".`)
+	}
 }

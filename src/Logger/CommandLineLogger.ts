@@ -63,7 +63,7 @@ export class CommandLineLogger extends NullLogger implements Logger {
 	 * @param  {Stringable} message Message to log.
 	 * @param  {LogContext} context Logging context for the logged message.
 	 * @return {void}
-	 * @throws {TypeError}
+	 * @throws {TypeError}          Level is invalid.
 	 *
 	 * @since  unreleased
 	 */
@@ -72,6 +72,8 @@ export class CommandLineLogger extends NullLogger implements Logger {
 		message: Stringable,
 		context: LogContext = {},
 	): void {
+		this.validateLevel(level)
+
 		this.#commandLine[CommandLineMethod[level]](
 			this.interpolate(message, context),
 		)
