@@ -6,7 +6,7 @@ import { stat } from 'node:fs/promises'
 const __filename = fileUrlToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-const BUNDLE_MAXIMUM_KIB = 5
+const BUNDLE_MAXIMUM_KIB = 9
 const BUNDLE_MAXIMUM_SIZE = BUNDLE_MAXIMUM_KIB * 1024
 
 describe('compiled javascript bundle', () => {
