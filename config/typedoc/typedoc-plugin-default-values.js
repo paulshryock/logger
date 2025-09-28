@@ -42,7 +42,7 @@ class DefaultValuesPlugin {
 	/** @var {Map<Reflection, string>} defaultValues Map of default values. */
 	defaultValues
 
-	/** @var {TypeScript.printer} printer TypeScript printer. */
+	/** @var {import('typescript').printer} printer TypeScript printer. */
 	printer
 
 	/**
